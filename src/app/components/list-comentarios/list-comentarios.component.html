@@ -1,0 +1,38 @@
+<div class="row mt-3">
+    <div class="col-lg-6">
+        <h1>Listadoooo</h1>
+    </div>
+    <div class="col-lg-6 ">
+        <button class="btn btn-primary float-center" routerLink="/agregar">Insette comentaio</button>
+    </div>
+
+</div>
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>Titulo</td>
+            <td>Creador</td>
+            <td>Fecha</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let comentario of listComentarios">
+           <td><a [routerLink]="['/ver',comentario.id]">{{comentario.titulo}}</a></td>
+           <td>{{comentario.creador}}</td>
+           <td>{{comentario.fechaCreacion | date:"dd/MM/yyyy"}}</td>
+            <td>
+                <button [routerLink]="['/editar',comentario.id]" class="btn btn-primary btn-sm float-end">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminarComentario(comentario.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="row mt-5" *ngIf="listComentarios.length==0">
+    <p>No hay comentarios</p>
+</div>

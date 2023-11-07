@@ -1,0 +1,38 @@
+.nav{
+    background-color: #ABE35B;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    box-shadow: 5px 5px 10px rgba(2, 43, 13, 0.54);
+}
+ul.navbar{
+    overflow: hidden;
+    margin:0;
+    padding: 0;
+    width: 40%;
+    
+}
+li.navitem {
+    display: inline; 
+    margin: 0 10px; 
+}
+
+li.navitem a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Rockwell;
+    font-size: large;
+}
+
+li.navitem a:hover {
+    background-color: #067F4B; 
+    border: 2px solid rgba(0, 0, 0, 0.379); 
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.3s;
+
+}

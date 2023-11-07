@@ -1,0 +1,8 @@
+<p>{{comentario}}</p>
+<div *ngIf="comentario!==undefined">
+    <h1>Creador:{{comentario.creador}}</h1>
+    <h1>Titulo:{{comentario.titulo}}</h1>
+    <h1>Texto:{{comentario.texto}}</h1>
+    <h1>Fecha:{{comentario.fechaCreacion | date:'dd/MM/yyyy'}}</h1>
+
+</div>
